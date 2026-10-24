@@ -1,0 +1,77 @@
+﻿@model DogBreedsApp.ViewModels.DogBreedFormViewModel
+
+@{
+    ViewData["Title"] = "Добавяне на порода";
+}
+
+<h2 class="mb-4">➕ Добавяне на нова порода</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create" method="post" class="card p-4 shadow-sm">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label fw-bold"></label>
+                <input asp-for="Name" class="form-control" placeholder="напр. Голдън Ретривър" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ShortDescription" class="form-label fw-bold"></label>
+                <textarea asp-for="ShortDescription" class="form-control" rows="3" placeholder="Кратко описание на породата..."></textarea>
+                <span asp-validation-for="ShortDescription" class="text-danger"></span>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Origin" class="form-label fw-bold"></label>
+                    <input asp-for="Origin" class="form-control" placeholder="напр. Шотландия" />
+                    <span asp-validation-for="Origin" class="text-danger"></span>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="AverageLifespanYears" class="form-label fw-bold"></label>
+                    <input asp-for="AverageLifespanYears" class="form-control" type="number" />
+                    <span asp-validation-for="AverageLifespanYears" class="text-danger"></span>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="EnergyLevel" class="form-label fw-bold"></label>
+                    <input asp-for="EnergyLevel" class="form-control" type="number" min="1" max="5" />
+                    <span asp-validation-for="EnergyLevel" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImageUrl" class="form-label fw-bold"></label>
+                <input asp-for="ImageUrl" class="form-control" placeholder="https://..." />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="BreedGroupId" class="form-label fw-bold"></label>
+                    <select asp-for="BreedGroupId" asp-items="Model.BreedGroups" class="form-select">
+                        <option value="">-- Избери група --</option>
+                    </select>
+                    <span asp-validation-for="BreedGroupId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="CareRequirementId" class="form-label fw-bold"></label>
+                    <select asp-for="CareRequirementId" asp-items="Model.CareRequirements" class="form-select">
+                        <option value="">-- Избери изисквания --</option>
+                    </select>
+                    <span asp-validation-for="CareRequirementId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mt-3 d-flex gap-2">
+                <button type="submit" class="btn btn-success">Запази</button>
+                <a asp-action="Index" class="btn btn-secondary">Отказ</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

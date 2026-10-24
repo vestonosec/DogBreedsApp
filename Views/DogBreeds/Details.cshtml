@@ -1,0 +1,42 @@
+﻿@model DogBreedsApp.ViewModels.DogBreedDetailsViewModel
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="container my-4">
+    <div class="card shadow-lg border-0 overflow-hidden">
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img src="@Model.ImageUrl" class="img-fluid h-100 w-100" alt="@Model.Name" style="object-fit: cover; min-height: 350px;">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body p-4">
+                    <h2 class="card-title fw-bold mb-3">@Model.Name</h2>
+                    <p class="lead text-secondary mb-4">@Model.ShortDescription</p>
+
+                    <h5 class="fw-bold border-bottom pb-2">📋 Основна информация</h5>
+                    <div class="row mb-4">
+                        <div class="col-6 mb-2"><strong>Страна на произход:</strong> @Model.Origin</div>
+                        <div class="col-6 mb-2"><strong>Продължителност на живот:</strong> ~@Model.AverageLifespanYears години</div>
+                        <div class="col-6 mb-2"><strong>Ниво на енергия:</strong> @Model.EnergyLevel / 5</div>
+                        <div class="col-6 mb-2"><strong>Група:</strong> <span class="badge bg-secondary">@Model.BreedGroupName</span></div>
+                    </div>
+
+                    <h5 class="fw-bold border-bottom pb-2">🦴 Нужди от грижа</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-1"><strong>✂️ Поддръжка (Grooming):</strong> @Model.GroomingNeeds</li>
+                        <li class="mb-1"><strong>🏃 Движение:</strong> @Model.DailyExercise</li>
+                        <li class="mb-1"><strong>🎓 Обучение:</strong> @Model.TrainingEase</li>
+                        <li class="mb-1"><strong>🥗 Хранене:</strong> @Model.SpecialDietNotes</li>
+                    </ul>
+
+                    <div class="mt-4 pt-3 border-top d-flex gap-2">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Редактирай</a>
+                        <a asp-action="Index" class="btn btn-secondary">Назад към списъка</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
