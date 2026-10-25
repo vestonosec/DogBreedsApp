@@ -53,8 +53,8 @@ namespace DogBreedsApp.Migrations
                         new
                         {
                             Id = 2,
-                            Description = "Intelligent working dogs trained to gather and herd livestock.",
-                            Name = "Herding"
+                            Description = "Intelligent working dogs trained to gather livestock, guard, or perform search and rescue.",
+                            Name = "Herding & Working"
                         },
                         new
                         {
@@ -231,7 +231,7 @@ namespace DogBreedsApp.Migrations
                             BreedGroupId = 1,
                             CareRequirementId = 1,
                             EnergyLevel = 4,
-                            ImageUrl = "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINOF_y70BP7qDc3GwGxXsij_DehMSSIfMDsUyKIfiqw&s=10",
                             Name = "Beagle (Бигъл)",
                             Origin = "United Kingdom",
                             ShortDescription = "Curious, friendly, and merry hunting hound with great sense of smell."
@@ -246,7 +246,7 @@ namespace DogBreedsApp.Migrations
                             ImageUrl = "https://images.unsplash.com/photo-1605568427561-40dd23c2acea",
                             Name = "Siberian Husky (Сибирско хъски)",
                             Origin = "Russia",
-                            ShortDescription = "Beautiful, energetic, and resilient sled dog with striking blue or brown eyes."
+                            ShortDescription = "Beautiful, energetic, and resilient sled dog with striking eyes."
                         },
                         new
                         {
@@ -255,10 +255,118 @@ namespace DogBreedsApp.Migrations
                             BreedGroupId = 3,
                             CareRequirementId = 3,
                             EnergyLevel = 3,
-                            ImageUrl = "https://images.unsplash.com/photo-1561037404-61cd46aa615b",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf6U7Ujasw6-bU2o7QFd_9OHAHxKiaXQA4dP5FbkbHLA&s=10",
                             Name = "Poodle (Пудел)",
                             Origin = "France / Germany",
                             ShortDescription = "Exceptionally smart, active, and hypoallergenic companion dog."
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AverageLifespanYears = 13,
+                            BreedGroupId = 3,
+                            CareRequirementId = 3,
+                            EnergyLevel = 2,
+                            ImageUrl = "https://images.unsplash.com/photo-1517849845537-4d257902454a",
+                            Name = "Pug (Мопс)",
+                            Origin = "China",
+                            ShortDescription = "Charming, playful, and affectionate toy breed with expressive eyes."
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AverageLifespanYears = 12,
+                            BreedGroupId = 1,
+                            CareRequirementId = 2,
+                            EnergyLevel = 4,
+                            ImageUrl = "https://www.zoomalia.com/blogz/3431/tout-savoir-sur-levrier-afghan.jpeg",
+                            Name = "Afghan Hound (Афганска хрътка)",
+                            Origin = "Afghanistan",
+                            ShortDescription = "Elegantly beautiful, regal, and dignified sighthound with a long coat."
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AverageLifespanYears = 15,
+                            BreedGroupId = 3,
+                            CareRequirementId = 3,
+                            EnergyLevel = 3,
+                            ImageUrl = "https://images.unsplash.com/photo-1560807707-8cc77767d783",
+                            Name = "Chihuahua (Чихуахуа)",
+                            Origin = "Mexico",
+                            ShortDescription = "Tiny companion with a big personality, fiercely loyal and lively."
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AverageLifespanYears = 12,
+                            BreedGroupId = 2,
+                            CareRequirementId = 1,
+                            EnergyLevel = 4,
+                            ImageUrl = "https://images.unsplash.com/photo-1601758228041-f3b2795255f1",
+                            Name = "Bull Terrier (Бултериер)",
+                            Origin = "United Kingdom",
+                            ShortDescription = "Playful, muscular, and devoted breed with an iconic egg-shaped head."
+                        },
+                        new
+                        {
+                            Id = 13,
+                            AverageLifespanYears = 11,
+                            BreedGroupId = 2,
+                            CareRequirementId = 2,
+                            EnergyLevel = 5,
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKry-6yfxN038QLTs5pI_34kpldhXi_Q7tUGcOEDegBQ&s=10",
+                            Name = "Doberman Pinscher (Доберман)",
+                            Origin = "Germany",
+                            ShortDescription = "Sleek, powerful, highly intelligent, and fearless guardian dog."
+                        },
+                        new
+                        {
+                            Id = 14,
+                            AverageLifespanYears = 10,
+                            BreedGroupId = 2,
+                            CareRequirementId = 2,
+                            EnergyLevel = 4,
+                            ImageUrl = "https://images.unsplash.com/photo-1567752881298-894bb81f9379",
+                            Name = "Rottweiler (Ротвайлер)",
+                            Origin = "Germany",
+                            ShortDescription = "Confident, strong, and deeply loyal protector for active families."
+                        },
+                        new
+                        {
+                            Id = 15,
+                            AverageLifespanYears = 14,
+                            BreedGroupId = 3,
+                            CareRequirementId = 3,
+                            EnergyLevel = 3,
+                            ImageUrl = "https://cdn5.amwws.com/a/pomerani.alle.bg/assets/dd196b20691b-c999999999/ahxedo2wblj2fha43u3mjiu.jpg",
+                            Name = "Pomeranian (Померан)",
+                            Origin = "Germany / Poland",
+                            ShortDescription = "Fluffy, lively, and inquisitive small dog full of personality."
+                        },
+                        new
+                        {
+                            Id = 16,
+                            AverageLifespanYears = 13,
+                            BreedGroupId = 3,
+                            CareRequirementId = 3,
+                            EnergyLevel = 4,
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2DOMTB19nYEmMWzBVvUi3H4tibGxE6PnHMT97D_wAAQ&s=10",
+                            Name = "Miniature Pinscher (Пинчер)",
+                            Origin = "Germany",
+                            ShortDescription = "Fearless, energetic, and compact toy breed known as the King of Toys."
+                        },
+                        new
+                        {
+                            Id = 17,
+                            AverageLifespanYears = 13,
+                            BreedGroupId = 1,
+                            CareRequirementId = 1,
+                            EnergyLevel = 4,
+                            ImageUrl = "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a",
+                            Name = "English Cocker Spaniel (Кокер шпаньол)",
+                            Origin = "United Kingdom",
+                            ShortDescription = "Gentle, affectionate, and cheerful sporting dog with silky ears."
                         });
                 });
 
