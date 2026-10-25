@@ -171,7 +171,7 @@ namespace DogBreedsApp.Migrations
                             BreedGroupId = 1,
                             CareRequirementId = 1,
                             EnergyLevel = 4,
-                            ImageUrl = "https://images.unsplash.com/photo-1591769225440-811ad7d6eab2",
+                            ImageUrl = "https://images.unsplash.com/photo-1552053831-71594a27632d",
                             Name = "Labrador Retriever",
                             Origin = "Canada",
                             ShortDescription = "Friendly, outgoing, and high-energy companion dog."
@@ -199,6 +199,66 @@ namespace DogBreedsApp.Migrations
                             Name = "French Bulldog",
                             Origin = "France",
                             ShortDescription = "Playful, adaptable, and affectionate small companion dog."
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AverageLifespanYears = 14,
+                            BreedGroupId = 3,
+                            CareRequirementId = 3,
+                            EnergyLevel = 3,
+                            ImageUrl = "https://images.unsplash.com/photo-1612195583950-b8fd34c87093",
+                            Name = "Dachshund (Дакел)",
+                            Origin = "Germany",
+                            ShortDescription = "Clever, lively, and courageous small hound breed."
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AverageLifespanYears = 12,
+                            BreedGroupId = 1,
+                            CareRequirementId = 1,
+                            EnergyLevel = 4,
+                            ImageUrl = "https://images.unsplash.com/photo-1633722715463-d30f4f325e24",
+                            Name = "Golden Retriever",
+                            Origin = "Scotland",
+                            ShortDescription = "Intelligent, friendly, and devoted sporting family dog."
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AverageLifespanYears = 13,
+                            BreedGroupId = 1,
+                            CareRequirementId = 1,
+                            EnergyLevel = 4,
+                            ImageUrl = "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8",
+                            Name = "Beagle (Бигъл)",
+                            Origin = "United Kingdom",
+                            ShortDescription = "Curious, friendly, and merry hunting hound with great sense of smell."
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AverageLifespanYears = 13,
+                            BreedGroupId = 2,
+                            CareRequirementId = 2,
+                            EnergyLevel = 5,
+                            ImageUrl = "https://images.unsplash.com/photo-1605568427561-40dd23c2acea",
+                            Name = "Siberian Husky (Сибирско хъски)",
+                            Origin = "Russia",
+                            ShortDescription = "Beautiful, energetic, and resilient sled dog with striking blue or brown eyes."
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AverageLifespanYears = 14,
+                            BreedGroupId = 3,
+                            CareRequirementId = 3,
+                            EnergyLevel = 3,
+                            ImageUrl = "https://images.unsplash.com/photo-1561037404-61cd46aa615b",
+                            Name = "Poodle (Пудел)",
+                            Origin = "France / Germany",
+                            ShortDescription = "Exceptionally smart, active, and hypoallergenic companion dog."
                         });
                 });
 

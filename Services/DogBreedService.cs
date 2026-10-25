@@ -15,10 +15,21 @@ namespace DogBreedsApp.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<DogBreedFormViewModel>> GetAllBreedsAsync()
+        public async Task<IEnumerable<DogBreedFormViewModel>> GetAllBreedsAsync(string? searchString = null, int? breedGroupId = null)
         {
-            return await _context.DogBreeds
-                .AsNoTracking()
+            var query = _context.DogBreeds.AsNoTracking().AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchString))
+            {
+                query = query.Where(b => b.Name.Contains(searchString) || b.ShortDescription.Contains(searchString));
+            }
+
+            if (breedGroupId.HasValue)
+            {
+                query = query.Where(b => b.BreedGroupId == breedGroupId.Value);
+            }
+
+            return await query
                 .Select(b => new DogBreedFormViewModel
                 {
                     Id = b.Id,

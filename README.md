@@ -1,60 +1,52 @@
-﻿# DogBreedsApp - ASP.NET Core MVC Application
+﻿# DogBreedsApp - ASP.NET Core Уеб Приложение
 
-## 🐾 Project Overview
-**DogBreedsApp** is a web application designed for dog lovers, owners, and enthusiasts to explore, manage, and learn about various dog breeds, their breed groups, and specific care requirements.
-
-This project is developed as an assignment for the **ASP.NET Fundamentals** course, demonstrating core MVC architecture, Entity Framework Core integration, 3-tier structure principles, and full CRUD operations.
+**DogBreedsApp** е динамично уеб приложение, изградено с **ASP.NET Core MVC (.NET 9.0)**, чиято цел е да улесни бъдещите собственици на кучета в избора на техния нов най-добър приятел.
 
 ---
 
-## 🛠️ Technologies Used
-- **Framework:** .NET 9.0 (ASP.NET Core MVC)
-- **Database:** Microsoft SQL Server (LocalDB)
+## Основна цел на проекта
+Изборът на куче е важно решение. Приложението предоставя каталог с детайлна информация за различни породи — произход, продължителност на живот, ниво на енергия и специфични изисквания за грижа. Тъй като породите по света са стотици, платформата позволява на потребителите динамично да добавят нови породи и да ги управляват.
+
+---
+
+## Функционалности
+
+- **🏠 Начална страница (Landing Page):** Модерен Bootstrap интерфейс с бързи бутони към каталога и добавянето на нови породи.
+- **🐾 Каталог с породи (Index):** Преглед на всички налични породи във вид на стилни карти с изображения и ключови характеристики.
+- **🔍 Търсене и филтриране:** 
+  - Търсене по име или кратко описание.
+  - Филтриране по група на породата (*Sporting*, *Herding*, *Companion/Toy* и др.).
+- **📋 Детайлен преглед (Details):** Пълна информация за породата, включително групата и специфичните нужди от грижа (разходка, обучение, хранене, поддръжка).
+- **➕ Добавяне на порода (Create):** Форма с валидация на данните (Name, Description, Energy Level, Image URL и падащи менюта за релациите).
+- **✏️ Редакция (Edit):** Възможност за актуализация на съществуваща порода.
+- **🗑️ Изтриване (Delete):** Страница за потвърждение преди премахване на порода от базата данни.
+- **ℹ️ Страница "За нас":** Информация за мисията на сайта и разработчика.
+
+---
+
+## Използвани технологии
+
+- **Framework:** .NET 9.0 / ASP.NET Core MVC
 - **ORM:** Entity Framework Core 9.0
-- **Frontend:** Razor Views, HTML5, CSS3, Bootstrap 5
-- **Tooling & VCS:** Visual Studio 2022, Git & GitHub
+- **Database:** SQL Server (LocalDB)
+- **Frontend Framework:** Bootstrap 5 & Razor Views
+- **Architecture:** 
+  - **Service Layer Pattern** (`IDogBreedService` / `DogBreedService`)
+  - **ViewModels** с пълна Data Annotation валидация (`DogBreedFormViewModel`, `DogBreedDetailsViewModel`)
+- **Version Control:** Git & GitHub
 
 ---
 
-## 🏗️ Domain Models & Architecture
-The application is built around 3 main domain entities:
-1. **`DogBreed` (Main Entity):** Represents individual dog breeds with attributes such as Name, Short Description, Origin, Average Lifespan, Energy Level, Image URL, and relationships to Breed Group and Care Requirement.
-2. **`BreedGroup`:** Categorizes breeds into groups (e.g., Sporting & Retrievers, Herding, Companion / Toy).
-3. **`CareRequirement`:** Stores detailed care guidelines (grooming needs, daily exercise requirements, training ease, special diet notes).
+## Структура на базата данни (Entities)
+
+1. **`DogBreed`**: `Id`, `Name`, `ShortDescription`, `Origin`, `AverageLifespanYears`, `EnergyLevel`, `ImageUrl`, `BreedGroupId`, `CareRequirementId`
+2. **`BreedGroup`**: `Id`, `Name`, `Description`
+3. **`CareRequirement`**: `Id`, `GroomingNeeds`, `DailyExercise`, `TrainingEase`, `SpecialDietNotes`
 
 ---
 
-## 🌟 Key Features
-- **Explore Breeds:** Interactive catalog displaying dog breeds in structured Bootstrap cards.
-- **Breed Details:** Deep-dive view showing origin, energy level, lifespan, and full care requirements.
-- **Full CRUD Operations:** Create, Read, Update, and Delete capabilities for dog breeds with server-side and client-side validation.
-- **Breed Groups Overview:** Grouped view showing categories and registered breed counts.
+## Инструкции за стартиране
 
----
-
-## 🚀 Getting Started & Setup Instructions
-
-### Prerequisites
-- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with the **ASP.NET and web development** workload.
-- **SQL Server Express LocalDB** (included with Visual Studio).
-
-### Installation & Local Setup
-
-1. **Clone / Open Repository:**
-   Open the solution in Visual Studio 2022.
-
-2. **Configure Database Connection String:**
-   The connection string is pre-configured in `appsettings.json` using LocalDB:
-   ```json
-   "ConnectionStrings":
-   {
-     "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=DogBreedsDb;Trusted_Connection=True;MultipleActiveResultSets=true"
-   }
-3.  **Apply Migrations & Seed Database:**
-   Open the **Package Manager Console** in Visual Studio and run:
-   ```powershell
-   Update-Database
-   ```
-   This will create the database schema and seed initial data.
-   4. **Run the Application:**
+1. **Клонирайте хранилището:**
+   ```bash
+   git clone [https://github.com/vestonosec/DogBreedsApp.git](https://github.com/vestonosec/DogBreedsApp.git)

@@ -5,7 +5,7 @@ namespace DogBreedsApp.Services
 {
     public interface IDogBreedService
     {
-        Task<IEnumerable<DogBreedFormViewModel>> GetAllBreedsAsync();
+        Task<IEnumerable<DogBreedFormViewModel>> GetAllBreedsAsync(string? searchString = null, int? breedGroupId = null);
         Task<DogBreedDetailsViewModel?> GetBreedDetailsAsync(int id);
         Task<DogBreedFormViewModel?> GetBreedForEditAsync(int id);
         Task CreateBreedAsync(DogBreedFormViewModel model);

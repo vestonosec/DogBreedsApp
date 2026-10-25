@@ -13,9 +13,13 @@ namespace DogBreedsApp.Controllers
             _breedService = breedService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? searchString, int? breedGroupId)
         {
-            var breeds = await _breedService.GetAllBreedsAsync();
+            ViewBag.CurrentSearch = searchString;
+            ViewBag.CurrentGroup = breedGroupId;
+            ViewBag.BreedGroups = await _breedService.GetBreedGroupSelectListAsync();
+
+            var breeds = await _breedService.GetAllBreedsAsync(searchString, breedGroupId);
             return View(breeds);
         }
 

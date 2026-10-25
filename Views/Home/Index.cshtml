@@ -1,8 +1,53 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Начало";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="p-5 mb-4 bg-light rounded-3 shadow-sm text-center position-relative overflow-hidden">
+    <div class="container-fluid py-5">
+        <h1 class="display-4 fw-bold text-primary mb-3">🐶 Добре дошли в DogBreedsApp!</h1>
+        <p class="col-md-8 fs-4 mx-auto text-dark fw-medium">
+            Сайтът, който ще ти помогне с избора на твоя бъдещ най-добър приятел!
+        </p>
+        <p class="col-md-8 fs-6 mx-auto text-muted mb-4">
+            Разгледай детайлни характеристики, съвети за грижа, нива на енергия и произход на любимите си кучета, за да направиш най-добрия избор.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+            <a asp-controller="DogBreeds" asp-action="Index" class="btn btn-primary btn-lg px-4 gap-3 fw-bold">
+                🐾 Към Каталога с породи
+            </a>
+            <a asp-controller="DogBreeds" asp-action="Create" class="btn btn-outline-success btn-lg px-4">
+                + Добави нова порода
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4 mb-4">
+        <div class="card border-0 shadow-sm h-100 p-3">
+            <div class="card-body">
+                <div class="fs-1 mb-2">📋</div>
+                <h5 class="card-title fw-bold">Подробни профили</h5>
+                <p class="card-text text-muted">Детайлна информация за произход, продължителност на живот и специални изисквания за грижа.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card border-0 shadow-sm h-100 p-3">
+            <div class="card-body">
+                <div class="fs-1 mb-2">⚡</div>
+                <h5 class="card-title fw-bold">Нива на активност</h5>
+                <p class="card-text text-muted">Открийте куче, което отговаря перфектно на вашия начин на живот и ниво на енергия.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card border-0 shadow-sm h-100 p-3">
+            <div class="card-body">
+                <div class="fs-1 mb-2">🔍</div>
+                <h5 class="card-title fw-bold">Лесно търсене</h5>
+                <p class="card-text text-muted">Бързо филтрирайте породите по групи или ги намерете с търсачката по име.</p>
+            </div>
+        </div>
+    </div>
 </div>
